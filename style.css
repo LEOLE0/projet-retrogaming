@@ -1,55 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 
-body {
+* {
   margin: 0;
-  text-align: center;
-  font-family: 'Press Start 2P', cursive;
-  user-select: none;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
   
 }
-
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
+body {
+  background-image: url('media/BG2.jpg');
+  background-size: cover;  /* Assure que l'image couvre toute la surface */
+  background-repeat: no-repeat;  /* Empêche la répétition de l'image */
+  background-position: center center;  /* Centre l'image */
+  height: 100vh;  /* Assure que le body prend toute la hauteur de la fenêtre */
 }
-
-.video-background video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-}
-
-
-header {
-  margin: 0 auto;
-  
-}
-
-
+/* .content {
+  color: #09fbba;
+  transition: 1s;
+} */
 
 h1 {
-  background-color: rgb(76, 201, 185);
-  padding: 1.2rem 0;
-  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5rem;
+  /* transform: translateY(100%);
+  transform: translateX(10%); */
+}
+p {
+  padding: 30px 50px;
 }
 
 
 
+#side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: #A175B3;
+  top: 0;
+  left: -230px;
+  transition: 0.3s ease-out;
+  z-index: 4;
+}
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.toggle-btn span {
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #12729e;
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+li {
+  color: #292929;
+  list-style: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding-left: 5px;
+  
+}
+li:hover {
+  background: #4e95b6;
+  color: #332239;
+}
+#side-bar.active {
+  left: 0;
 
-.score-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 6px;
-  background: #5EE270;
+}
+.active span {
+  position: absolute;
+}
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.active span:nth-child(2) {
+  opacity: 0;
+}
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.active ~ .content {
+  opacity: 0.01;
 }
