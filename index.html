@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Validation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="sb" id="side-bar">
-    <div class="toggle-btn" id="btn">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="container">
+        <form id="registrationForm" action="success.html" method="post">
+            <h2>Inscription</h2>
+            <div class="form-group">
+                <label for="username">Pseudo</label>
+                <input type="text" id="username" name="username" required minlength="3" pattern=".{3,}">
+                <span class="error-message">Le pseudo doit comporter au moins 3 caractères.</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message">Veuillez entrer une adresse email valide.</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+                <div id="passwordStrength"></div>
+                <span class="error-message">Le mot de passe doit comporter au moins 8 caractères, une majuscule et un caractère spécial.</span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirmer le mot de passe</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error-message">Les mots de passe ne correspondent pas.</span>
+            </div>
+            <button type="submit">S'inscrire</button>
+        </form>
     </div>
-
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li><a href="spacy.html">Games</a></li>
-      <li class="list">Contact</li>
-    </ul>
-  </div>
-
-  <section class="content">
-    <h1>Life is</h1>
-    <h1 id="target"></h1>
-    
-  </section>
-
-  <script src="index.js"></script> 
+    <script src="script.js"></script>
 </body>
-
 </html>
