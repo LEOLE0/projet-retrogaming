@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  
+}
+body {
+  background-image: url('media/BG4.jpg');
+  background-size: cover;  /* Assure que l'image couvre toute la surface */
+  background-repeat: no-repeat;  /* Empêche la répétition de l'image */
+  background-position: center center;  /* Centre l'image */
+  height: 100vh;  /* Assure que le body prend toute la hauteur de la fenêtre */
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 100;
+  color: #06b5d8e2;
+  transition: 1s;
+  transform: translateY(60%);
+  
+}
+
+#target {
+  color: rgb(208, 109, 21);
+  transform: translateY(30%);
+}
+
+p {
+  padding: 30px 50px;
+}
+
+
+
+#side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: #ad78bee2;
+  top: 0;
+  left: -230px;
+  transition: 0.5s ease-out;
+  z-index: 4;
+}
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.toggle-btn span {
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #12729e;
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+li {
+  color: #292929;
+  list-style: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding-left: 5px;
+  
+}
+li:hover {
+  background: #40758e80;
+  color: #332239;
+}
+#side-bar.active {
+  left: 0;
+
+}
+.active span {
+  position: absolute;
+}
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.active span:nth-child(2) {
+  opacity: 0;
+}
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.active ~ .content {
+  opacity: 0.01;
+}
+
+
+
+
+/* -----------------RESPONSIVE----------------- */
+
+@media (max-width: 768px) {
+
+}
