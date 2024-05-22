@@ -1,0 +1,140 @@
+body {
+    
+    background: url('media/BG.jpg');
+    background-size: cover;  /* Assure que l'image couvre toute la surface */
+    background-repeat: no-repeat;  /* Empêche la répétition de l'image */
+    background-position: center center;  /* Centre l'image */
+    height: 100vh;
+    margin: 0;
+    
+}
+
+/* -----------------SIDEBAR----------------- */
+.links {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+   text-align: left;
+   
+    
+  }
+  
+  #side-bar {
+    position: absolute;
+    width: 230px;
+    height: 100%;
+    background: #c6782f93;
+    top: 0;
+    left: -230px;
+    transition: 0.5s ease-out;
+    z-index: 100;
+    
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 15px;
+    left: 240px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .toggle-btn span {
+    width: 40px;
+    height: 8px;
+    border-radius: 5px;
+    background: #1c868f;
+    display: block;
+    margin-top: 4px;
+    transition: 0.3s ease;
+  }
+  
+  li {
+    color: #292929;
+    list-style: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding-left: 5px;
+  }
+  
+  li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  li:hover {
+    background: #40758e80;
+    color: #332239;
+  }
+  
+  #side-bar.active {
+    left: 0;
+  }
+  
+  .active span {
+    position: absolute;
+  }
+  
+  .active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  .active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  .active ~ .content {
+    opacity: 0.01;
+  }
+  
+  .sub-menu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  li:hover > .sub-menu {
+    display: block;
+  }
+
+
+  /* ---------------ABOUT--------------- */
+
+  .content {
+    
+
+  font-family: 'Courier New', Courier, monospace;
+  
+    padding: 20px;
+    max-width: 400px;
+    background: #ef933db3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+   
+  }

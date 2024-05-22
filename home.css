@@ -3,16 +3,14 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   text-decoration: none;
-  
 }
 body {
   background-image: url('media/BG4.jpg');
-  background-size: cover;  /* Assure que l'image couvre toute la surface */
-  background-repeat: no-repeat;  /* Empêche la répétition de l'image */
-  background-position: center center;  /* Centre l'image */
-  height: 100vh;  /* Assure que le body prend toute la hauteur de la fenêtre */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
 }
 
 h1 {
@@ -24,7 +22,6 @@ h1 {
   color: #06b5d8e2;
   transition: 1s;
   transform: translateY(60%);
-  
 }
 
 #target {
@@ -38,15 +35,22 @@ p {
 
 
 
+
+.links {
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+ text-align: left;
+}
+
 #side-bar {
   position: absolute;
   width: 230px;
   height: 100%;
-  background: #ad78bee2;
+  background: #b86e2dbb;
   top: 0;
   left: -230px;
   transition: 0.5s ease-out;
   z-index: 4;
+  
 }
 .toggle-btn {
   position: absolute;
@@ -57,10 +61,10 @@ p {
   width: 50px;
 }
 .toggle-btn span {
-  width: 60px;
-  height: 10px;
+  width: 40px;
+  height: 8px;
   border-radius: 5px;
-  background: #12729e;
+  background: #1a86b8;
   display: block;
   margin-top: 4px;
   transition: 0.3s ease;
@@ -77,9 +81,13 @@ li:hover {
   background: #40758e80;
   color: #332239;
 }
+li a {
+  color: inherit; /* Inherit color from li */
+  text-decoration: none; /* Remove underline */
+}
 #side-bar.active {
   left: 0;
-
+  
 }
 .active span {
   position: absolute;
@@ -97,11 +105,18 @@ li:hover {
   opacity: 0.01;
 }
 
-
-
+.sub-menu {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+li:hover > .sub-menu {
+  display: block;
+}
 
 /* -----------------RESPONSIVE----------------- */
 
 @media (max-width: 768px) {
-
+  /* Ajoutez des styles responsives ici */
 }
