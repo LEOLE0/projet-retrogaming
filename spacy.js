@@ -146,7 +146,7 @@ const render = () => {
         ];
       }
 
-      // si on tape un tuyaux, FIN !
+      // si on touche un tuyaux, FIN !
       if (
         [
           pipe[0] <= cTenth + size[0],
