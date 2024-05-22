@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>contact</title>
+</head>
+<body>
+<!-- ---------------SIDEBAR----------- -->
+    <div class="sb" id="side-bar">
+        <div class="toggle-btn" id="btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="#">Games</a>
+            <ul class="sub-menu">
+              <li><a href="spacy.html">S-Bird</a></li>
+              <li><a href="snake.html">Snake</a></li>
+              <li><a href="game3.html">Game 3</a></li>
+            </ul>
+          </li>
+          <li class="list"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    
+
+<!-- ---------------FORMULAIRE-------------------------- -->
+
+    <div class="container">
+        <form class="form">
+          <div class="descr">Contactez nous</div>
+          <div class="input">
+              <input required="" autocomplete="off" type="text">
+              <label for="name">Nom</label>
+          </div>
+    
+          <div class="input">
+              <input required="" autocomplete="off" name="email" type="text">
+              <label for="email">E-mail</label>
+          </div>
+    
+          <div class="input">
+              <textarea required="" cols="30" rows="1" id="message"></textarea>
+              <label for="message">Message</label>
+          </div>
+          <button>ENVOYER →</button>
+        </form>
+    </div>
+    
+    <script src="./home.js" type="text/javascript"></script>
+</body>
+</html>

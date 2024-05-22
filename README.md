@@ -10,7 +10,7 @@ Outils et Stack Utilisés
 	•	HTML : Pour la structure du jeu.
 	•	CSS : Pour le style et l’apparence du jeu.
 	•	JavaScript : Pour la logique du jeu et les interactions.
-	•	Node.js : Pour la gestion du serveur local durant le développement.
+	
 
 Plugins Visual Studio Code
 

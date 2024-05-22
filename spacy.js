@@ -8,7 +8,8 @@ img.src = "./media/flappy-bird-set.png";
 
 let gamePlaying = false;
 const gravity = 0.5;
-const speed = 6.2;
+const baseSpeed = 6.2; // Vitesse de base
+let currentSpeed = baseSpeed; // Vitesse actuelle qui changera
 const size = [51, 36];
 const jump = -9.5;
 const cTenth = canvas.width / 10;
@@ -29,6 +30,7 @@ let index = 0,
 
 const setup = () => {
   currentScore = 0;
+  currentSpeed = baseSpeed; // Réinitialiser la vitesse actuelle à la vitesse de base
   flight = jump;
   flyheight = canvas.height / 2 - size[1] / 2;
 
@@ -40,14 +42,14 @@ const setup = () => {
 const render = () => {
   index++;
 
-  //Background
+  // Background
   ctx.drawImage(
     img,
     0,
     0,
     canvas.width,
     canvas.height,
-    -((index * (speed / 2)) % canvas.width) + canvas.width,
+    -((index * (currentSpeed / 2)) % canvas.width) + canvas.width,
     0,
     canvas.width,
     canvas.height
@@ -59,7 +61,7 @@ const render = () => {
     0,
     canvas.width,
     canvas.height,
-    -((index * (speed / 2)) % canvas.width),
+    -((index * (currentSpeed / 2)) % canvas.width),
     0,
     canvas.width,
     canvas.height
@@ -99,11 +101,9 @@ const render = () => {
   // Affichage des tuyaux
   if (gamePlaying) {
     pipes.map((pipe) => {
-      pipe[0] -= speed;
+      pipe[0] -= currentSpeed;
 
-
-
-      //tuyaux DU HAUT
+      // tuyaux DU HAUT
       ctx.drawImage(
         img,
         432,
@@ -116,7 +116,7 @@ const render = () => {
         pipe[1]
       );
 
-      //tuyaux DU bas
+      // tuyaux DU bas
       ctx.drawImage(
         img,
         432 + pipeWidth,
@@ -134,15 +134,19 @@ const render = () => {
         currentScore++;
         bestScore = Math.max(bestScore, currentScore);
 
-        //faire disparaitre les tuyaux + créer des nouveaux
+        // Augmenter la vitesse des tuyaux chaque 15 points
+        if (currentScore % 15 === 0) {
+          currentSpeed += 0.5; // Augmentation de la vitesse
+        }
 
+        // faire disparaitre les tuyaux + créer des nouveaux
         pipes = [
           ...pipes.slice(1),
           [pipes[pipes.length - 1][0] + pipeGap + pipeWidth, pipeLoc()]
         ];
       }
 
-      //si on tape un tuyaux, FIN !
+      // si on tape un tuyaux, FIN !
       if (
         [
           pipe[0] <= cTenth + size[0],
@@ -156,10 +160,9 @@ const render = () => {
     });
   }
 
-  //AFFICHER LES SCORE
+  // AFFICHER LES SCORE
   document.getElementById("bestScore").innerHTML = `Meilleur : ${bestScore}`;
   document.getElementById("currentScore").innerHTML = `Actuel : ${currentScore}`;
- 
 
   window.requestAnimationFrame(render);
 };

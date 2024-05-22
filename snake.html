@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link href="snake.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ---------SIDEBAR----------- -->
+
+<div class="sb" id="side-bar">
+    <div class="toggle-btn" id="btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li>
+        <a href="#">Games</a>
+        <ul class="sub-menu">
+          <li><a href="spacy.html">S-Bird</a></li>
+          <li><a href="snake.html">Snake</a></li>
+          <li><a href="game3.html">Game 3</a></li>
+        </ul>
+      </li>
+      <li class="list"><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <!-- --------------------jeux---------------- -->
+
+  <div class="container">
+    <div class="score-container">
+      <div id="bestScore">Meilleur score : 0</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div id="currentScore">Score actuel : 0</div>
+    </div>
+    <canvas id="gameCanvas" width="430" height="430"></canvas>
+  </div>
+
+
+  <!-- -------------script JS------------ -->
+  <script src="snake.js"></script>
+  <script src="./home.js" type="text/javascript"></script>
+</body>
+</html>

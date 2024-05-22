@@ -9,10 +9,12 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+
+    
 }
 
 .container {
-    background: #9463b134;
+    background: #9463b154;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -22,7 +24,8 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #1f1f1f;
+    color: #ffffffd2;
+    background: #7f4682c1;
 }
 
 .form-group {
@@ -32,7 +35,7 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #1f1f1f;
+    color: #ffffffc1;
     font-weight: bold;
 }
 
@@ -59,7 +62,7 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background: #4f77e5;
+    background: #ff8e31;
     border: none;
     border-radius: 4px;
     color: rgb(255, 255, 255);

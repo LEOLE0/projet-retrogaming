@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+body {
+  padding: 1em;
+  font-family: 'Press Start 2P', cursive;
+  background: url('media/BG2.png');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+
+/* --------------------------SIDEBAR---------------- */
+
+
+.links {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+   text-align: left;
+   
+    
+  }
+  
+  #side-bar {
+    position: absolute;
+    width: 230px;
+    height: 100%;
+    background: #2b916aaa; 
+    top: 0;
+    left: -230px;
+    transition: 0.5s ease-out;
+    z-index: 4;
+    
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 15px;
+    left: 240px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .toggle-btn span {
+    width: 40px;
+    height: 8px;
+    border-radius: 5px;
+    background: #beb506; 
+    display: block;
+    margin-top: 4px;
+    transition: 0.3s ease;
+  }
+  
+  li {
+    color: #292929;
+    list-style: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding-left: 5px;
+  }
+  
+  li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  li:hover {
+    background: #40758e80;
+    color: #332239;
+  }
+  
+  #side-bar.active {
+    left: 0;
+  }
+  
+  .active span {
+    position: absolute;
+  }
+  
+  .active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  .active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  .active ~ .content {
+    opacity: 0.01;
+  }
+  
+  .sub-menu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  li:hover > .sub-menu {
+    display: block;
+  }
+
+
+
+/* -------------------------JEUX----------------- */
+.container {
+  text-align: center;
+}
+
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  margin-bottom: 10px;
+  color: #00742c; 
+  font-weight: 900;
+  background-color: rgba(211, 211, 211, 0.59);
+}
+
+#gameCanvas {
+  background-color: #2b916ad8; 
+  border: 2px solid #beb506; 
+}
+
+
+
+@media (max-width: 768px) {
+  
+    /* ---------canvas + SCORE---------- */
+   
+
+    #gameCanvas {
+    margin-bottom: -300px;
+      }
+
+
+      .score-container {
+        text-align: center;
+        display: flex;
+        
+        padding: 1.5em;
+        
+        font-size: 13px;
+      }
+
+
+
+
+    }
+    
